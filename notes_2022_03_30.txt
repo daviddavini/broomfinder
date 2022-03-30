@@ -1,0 +1,27 @@
+Highlights:
+- Built the "Data Getter", to scrape the classroom data off UCLA's website.
+
+I started by following a tutorial with requests and BeautifulSoup:
+https://realpython.com/beautiful-soup-web-scraper-python/
+
+But UCLA's Classroom Grid Search page is dynamic.
+According to this stackexchange, I need to use Selenium:
+https://stackoverflow.com/questions/55709463/how-to-scrape-dynamic-content-from-a-website
+
+This tutorial got me started with webscraping via Selenium:
+https://towardsdatascience.com/how-to-use-selenium-to-web-scrape-with-example-80f9b23a843a
+
+Since the page uses a Shadow DOM, I needed to use shadow_root, I used:
+https://stackoverflow.com/questions/70294294/unable-to-pull-text-from-elements-within-shadow-root-using-python-selenium
+
+To encode a query string in a url, I used urlcode, from this tutorial:
+http://www.compciv.org/guides/python/how-tos/creating-proper-url-query-strings/
+
+Initially, my plan was to store the final data as one large JSON object.
+However, I wanted to incrementally append the data from each classroom page.
+According to this stackexchange, I should use a CSV file and Pandas instead.
+So I did.
+https://stackoverflow.com/questions/12994442/how-to-append-data-to-a-json-file
+
+To append to a CSV file with Pandas, I used:
+https://stackoverflow.com/questions/17530542/how-to-add-pandas-data-to-an-existing-csv-file
