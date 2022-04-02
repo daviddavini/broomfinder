@@ -1,0 +1,14 @@
+Highlights:
+ -  Built the "Feature Extractor", to compute the relevant features 
+    of a classroom+situation for the objective function
+
+Earlier this week, I had made the "Feature Extractor", which really
+just amounted to loading a CSV file into JS, and working with datetime 
+data in JS.
+
+Today, I deployed the project to github! I created a new react app in 
+the subfolder my-app/ and pushed it to the gh-pages branch of my repo by
+following this tutorial:
+https://dev.to/yuribenjamin/how-to-deploy-react-app-in-github-pages-2a1f
+
+
