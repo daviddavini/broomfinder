@@ -33,9 +33,11 @@ def main():
 
 def scrape_menu(driver):
 
-    output_path = 'data.csv'
+    courses_output_path = 'data_courses.csv'
+    classrooms_output_path = 'data_classrooms.csv'
 
-    assert not os.path.exists(output_path), "data.csv already exists"
+    assert not os.path.exists(courses_output_path), "file already exists"
+    assert not os.path.exists(classrooms_output_path), "file already exists"
 
     URL = "https://sa.ucla.edu/RO/Public/SOC/Search/ClassroomGridSearch"
     driver.get(URL)
@@ -55,6 +57,10 @@ def scrape_menu(driver):
     options_text = dropdown.get_attribute("options")
 
     classrooms = json.loads(options_text)
+
+    df_classrooms = pd.DataFrame(classrooms)
+    df_classrooms.to_csv(classrooms_output_path, mode='a', index=False,
+                         header=True)
 
     needs_headers = True
 
@@ -76,15 +82,15 @@ def scrape_menu(driver):
 
         if courses != None:
 
-            df = pd.DataFrame(courses)
+            df_courses = pd.DataFrame(courses)
 
             # print(df)
 
             # df.insert(loc=0, column='classroom text', value=classroom['text'])
             # df.insert(loc=1, column='classroom index', value=i)
 
-            df.to_csv(output_path, mode='a', index=False,
-                      header=needs_headers)
+            df_courses.to_csv(courses_output_path, mode='a', index=False,
+                              header=needs_headers)
 
             # Only add headers the first time
             needs_headers = False
