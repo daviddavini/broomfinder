@@ -13,7 +13,7 @@ async function getSituation() {
     hour12: false,
   });
   //////////
-  situation.now_time = "12:30:00";
+  // situation.now_time = "12:30:00";
 
   situation.now_time_secs = timeToSeconds(situation.now_time);
   situation.now_day = date.getDay();
@@ -25,10 +25,10 @@ async function getSituation() {
   console.log(pos);
 
   //////////
-  situation.now_day = 5;
+  // situation.now_day = 5;
 
-  situation.now_lat = 34.068963;
-  situation.now_lon = -118.442286;
+  // situation.now_lat = 34.068963;
+  // situation.now_lon = -118.442286;
 
   return situation;
 }

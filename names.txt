@@ -1,4 +1,9 @@
 Bruin Space
 Bruin Study
 Bruin Suite
-B Room Finder
+B Room Finder   <--
+B Free Room
+B Study Space
+B Study
+B Empty         <--
+B Space

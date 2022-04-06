@@ -9,7 +9,7 @@ export function classroomCompareFn(a, b) {
   if (scoreA !== scoreB) {
     return scoreA - scoreB;
   } else {
-    return ("" + a.text).localeCompare(b.text);
+    return -("" + a.text).localeCompare(b.text);
   }
 }
 
