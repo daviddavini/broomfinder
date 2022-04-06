@@ -21,7 +21,7 @@
 .CourseBox {
   position: absolute;
   height: 100%;
-  background-color:greenyellow;
+  background-color:rgb(160,190,240);
 }
 
 /* .App-logo {
